@@ -57,3 +57,17 @@ let questions = [
      correct : "A"
      },
 ]
+
+let lastQuestionIndex = questions.length -1;
+let runningQuestionIndex = 0;
+
+function newQuestion(){
+    let q = questions[runningQuestionIndex];
+    question.innerHTML = "<p>" + q.question+ "</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
+}
+runningQuestionIndex++
+renderQuestion()
