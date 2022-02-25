@@ -1,4 +1,14 @@
 const start = document.getElementById("start");
+let timer;
+
+start.addEventListener("click", startQuiz);
+function startQuiz(){
+   start.style.display = "none";
+   counterRender();
+   timer = setInterval(counterRender,1000);
+   questionRender();
+   quiz.style.display = "block";
+}
 
 const quiz = document.getElementById("quiz");
 
@@ -14,6 +24,11 @@ const choiceC = document.getElementById("C");
 const choiceD = document.getElementById("D");
 
 const scoreContainer = document.getElementById("scoreContainer");
+function scoreRender(){
+   scoreContainer.style.display="block";
+   let scoreAmount = Math.round(100 * score / questions.length);
+   
+}
 
 let questions = [
     { 
