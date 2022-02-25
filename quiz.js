@@ -71,3 +71,43 @@ function newQuestion(){
 }
 runningQuestionIndex++
 renderQuestion()
+
+const quizTime = 60; 
+const gaugeWidth = 150;
+let count = 0;
+const gaugeProgressUnit = gaugeWidth/quizTime;
+
+function counterRender(){
+   if(count <= quizTime ){
+      counter.innerHTML = count;
+      timeGauge.style.width = gaugeProgressUnit * count +_"px";
+      count++;
+   }else{
+      count= 0;
+      wrongAnswer();
+      if(runningQuestionIndex < lastQuestionIndex){
+       runningQuestionIndex++;
+       questionRender();
+       //need an else statment if the timer runs out before a question is answered?
+         scoreRender();
+      }
+   }
+}
+let timer= setInterval(counterRender, 1000);
+
+function checkAnswer(answer){
+   if(questions[runningQuestionIndex].correct === answer){
+      score++;
+      correctAnswer();
+   }else{
+      wrongAnswer();
+   }
+   if(runningQuestionIndex < lastQuestionIndex){
+     runningQuestionIndex++;
+     questionRender(); 
+
+   }else{
+      scoreRender();
+
+   }
+}
