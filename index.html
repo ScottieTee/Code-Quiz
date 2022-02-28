@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="style.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <title>Code Quiz</title>
 </head>
 <body>
-    <header>
- <button id="start">Start Quiz! </button></header>
+    <header class="d-flex justify-content-center">
+ <button id="start" class="btn btn-outline-primary">Start Quiz! </button></header>
  
-    <div id="timer">
-        <p id="counter"> </p>
+    <div id="timer" class="p-2 bg-light border">
+        <p id="counter" class="d-flex justify-content-end"> </p>
         <div id ="backgroundTime"></div>
         <div id ="timeGauge"></div>
     </div>
     <div id="questionContainer" >
-        <h1 id="question">Question</h1>
-        <div id="answerList">
+        <h1 id="question" class="d-flex justify-content-center">Coding Quiz Challenge 
+            <div>Try to answer the following code-related questions correctly. Keep in mind incorrect answers will deduct from your final score!</div>
+        </h1>
+        <div id="answerList" class="d-flex justify-content-center">
         </div>
         <h3 id="checkAnswer"></h3>
-        <div id="next-container">
+        <div id="next-container" class="d-flex justify-content-center">
             <button id="nextBtn">Next</button>
         </div>
     </div>
