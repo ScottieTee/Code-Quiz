@@ -8,30 +8,29 @@
     <title>Code Quiz</title>
 </head>
 <body>
- <button id="start">Start Quiz! </button>
- <div id="quiz">
+    <header>
+ <button id="start">Start Quiz! </button></header>
  
     <div id="timer">
         <p id="counter"> </p>
         <div id ="backgroundTime"></div>
         <div id ="timeGauge"></div>
     </div>
-    <div id="questionContainer"><p id="question"> </p>
-<div id ="choices">
-    <p class="choice" id="A" onclick="checkAnswer('A')">A</p>
-    <p class="choice" id="B" onclick="checkAnswer('B')">B</p>
-    <p class="choice" id="C" onclick="checkAnswer('C')">C</p>
-    <p class="choice" id="D" onclick="checkAnswer('D')">D</p>
-    <button id="nextBtn">Next</button>
-</div>
-</div>
-</div>
-<div id="scoreContainer"style ="display: none;">
-    <p>your score</p>
-    <input id="inputField">
-    <button id="submitBegin">Submit</button>
-</div>
-
+    <div id="questionContainer" >
+        <h1 id="question">Question</h1>
+        <div id="answerList">
+        </div>
+        <h3 id="checkAnswer"></h3>
+        <div id="next-container">
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+    <div id="endingPage">
+        <h2 id="scoreDisplay">
+        </h2>
+        <input type="text" id="name">
+        <button id="submitbtn" >Submit</button>
+    </div>
  <script src="quiz.js"></script>
 </body>
 </html>
