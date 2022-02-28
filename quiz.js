@@ -5,7 +5,7 @@ var questions = [
     answer : "alerts"
     },
     { 
-       text : "lThe condition in an if/else statement is enclosed with _______.",
+       text : "The condition in an if/else statement is enclosed with _______.",
      choices : ["quotes", "curly brackets", "parenthesis", "square brackets"],
      answer : "curly brackets"
        },
@@ -14,11 +14,6 @@ var questions = [
          choices: ["numbers & strings", "booleans", "other arrays", "all of the above"],
          answer : "all of the above"
          },
-         { 
-      text : "String values must be enclosed within ______ when being assigned to variables.",
-      choices: ["quotes", "curly brackets", "parenthesis", "commas"],
-      answer : "quotes"
-      },
       {
          text : "String values must be enclosed within ______ when being assigned to variables.",
          choices: ["quotes", "curly brackets", "parenthesis", "commas"],
@@ -29,30 +24,6 @@ var questions = [
       choices: ["JavaScript", "terminal/bash", "for loops", "console log"],
       answer : "console log"
       },
-  
-  //  // question : "loremloremlorem",
-  //   choiceA : "ipsum",
-  //   choiceB : "valum",
-  //   choiceC : "blank",
-  //   choiceD : "answer",
-  //   correct : "A",
-  //   },
-  //   { 
-  //      question : "loremloremlorem",
-  //      choiceA : "ipsum",
-  //      choiceB : "valum",
-  //      choiceC : "blank",
-  //      choiceD : "answer",
-  //      correct : "A",
-  //      },
-  //   { 
-  //   question : "loremloremlorem",
-  //   choiceA : "ipsum",
-  //   choiceB : "valum",
-  //   choiceC : "blank",
-  //   choiceD : "answer",
-  //   correct : "A",
-  //   },
 ]
 var questionIndex = 0
 var quizTime = 60;
