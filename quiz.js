@@ -131,12 +131,13 @@ const gaugeProgressUnit = gaugeWidth/quizTime;
 
 function checkAnswer(ans){
    var answerCheck = document.createElement("h3")
+   answerCheck.style.display="flex"
    if(ans==questions[questionIndex].answer){
       score++;
-      answerCheck.textContent="correct!"
+      answerCheck.textContent="Correct!"
       displayScore(score)
    }else{
-      answerCheck.textContent="incorrect!"
+      answerCheck.textContent="Incorrect!"
    }
    questionContainer.appendChild(answerCheck)
    questionIndex++
