@@ -39,6 +39,7 @@ let timer;
    //quiz.style.display = "block";
 //}
 
+const Time_container = document.getElementById("timer");
 const quiz = document.getElementById("quiz");
 const nextBtn =document.getElementById("nextBtn");
 const question = document.getElementById("question");
@@ -78,6 +79,7 @@ function firstQuestion(q){
    }
    A.forEach(item=>{
       var answerbtn = document.createElement("button")
+      answerbtn.setAttribute("class", "btn btn-primary m-3")
       answerbtn.textContent=item
       answerList.appendChild(answerbtn)
       answerbtn.addEventListener("click", function(){
@@ -170,6 +172,13 @@ function displayScore(s){
 }
 function end(){
    questionContainer.style.display="none"
-   counter.style.display="none"
    endingPage.style.display="block"
+   Time_container.style.display = "none" 
+}
+function saveScore(){
+   submitbtn.addEventListener=("click", function(){
+      var nameofplayer = name.value
+      var names = localStorage.getItem("names")
+      names = JSON.parse(names)
+   })
 }
